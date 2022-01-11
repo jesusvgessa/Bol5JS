@@ -1,0 +1,19 @@
+/* Article */
+
+article {
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+article a {
+    color: black;
+    display: table-row;
+    font-family: consolas;
+    font-size: larger;
+    line-height: 3em;
+    transition: all ease-in-out 700ms;
+}
+
+article a:hover {
+    color: orange;
+}

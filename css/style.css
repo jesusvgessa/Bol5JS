@@ -1,0 +1,44 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* Header */
+
+header {
+    background-color: orange;
+    color: white;
+    font-family: consolas;
+    font-size: xx-large;
+    height: 3em;
+}
+
+header p {
+    text-align: center;
+    padding-top: 0.8em;
+}
+
+.fas {
+    background-color: white;
+    border-radius: 1em;
+    color: orange;
+    float: right;
+    margin: -1.5em 4em;
+    padding: 0.5em;
+}
+
+
+/* Footer */
+
+footer {
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    bottom: 0;
+    color: #929292;
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}

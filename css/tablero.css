@@ -1,0 +1,85 @@
+.marcador {
+    width: 40em;
+    color: white;
+    margin: 2em auto;
+    border-radius: 1em;
+}
+
+.marcadorJug1,
+.marcadorJug2 {
+    width: 10em;
+    background-color: orange;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.marcadorJug2 {
+    float: right;
+}
+
+#turnoJug {
+    padding: 0.5em;
+    margin: 1em auto;
+    width: 20em;
+    text-align: center;
+}
+
+#turnoJug1,
+#turnoJug2 {
+    width: 90%;
+    padding: 0.3em;
+    border-radius: 1em;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    color: orange;
+}
+
+#turnoJug1 {
+    background-color: #333;
+}
+
+td {
+    width: 2em;
+    height: 2em;
+    border: 0.2em solid orange;
+    font-size: 3em;
+    border-radius: 2em;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-size: cover;
+}
+
+table {
+    margin: 2em auto;
+}
+
+#otraPartida {
+    margin-left: 46.6%;
+    padding: 1em;
+    font-size: 1em;
+    background-color: orange;
+    color: white;
+    border: 0.1em solid orange;
+    border-radius: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+#otraPartida:hover {
+    opacity: 0.7;
+}
+
+#resultado {
+    width: 20em;
+    margin: 1em auto;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    background-color: black;
+    padding: 0.4em;
+    border-radius: 1em;
+    display: none;
+}

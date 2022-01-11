@@ -1,0 +1,55 @@
+form {
+    text-align: center;
+    margin-top: 2em;
+}
+
+input[type=text],
+input[type=submit] {
+    padding: 0.3em;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    background-color: orange;
+    border: 0.2em solid orange;
+    color: white;
+    border-radius: 0.4em;
+}
+
+.optAvatar {
+    text-align: center;
+    margin-top: 1em;
+}
+
+img {
+    width: 5em;
+    border-radius: 10em;
+}
+
+ul {
+    text-align: center;
+    margin-top: 1em;
+}
+
+li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#errores {
+    background-color: red;
+    color: white;
+    width: 60%;
+    border-radius: 2em;
+    text-align: center;
+}
+
+
+/* block/none */
+
+#avatarJug1,
+#formJug2,
+#avatarJug2,
+#errores {
+    display: none;
+}
