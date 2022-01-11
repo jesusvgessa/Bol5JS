@@ -9,10 +9,9 @@ var tablero = new Array(); //Array de las celdas
 for (var i = 0; i < 9; i++) {
     tablero.push("");
 } //Fin Para
-var otraPartida = document.getElementById("otraPartida");
 var turnoJug1 = document.getElementById("turnoJug1");
 var turnoJug2 = document.getElementById("turnoJug2");
-var resultado = document.getElementById("resultado");
+var finPartida = document.getElementById("finPartida");
 
 var celdaMarcada = (e, pos) => {
     //Almaceno la celda pulsada
@@ -34,10 +33,9 @@ var celdaMarcada = (e, pos) => {
         }
 
         if (victoria()) {
-            resultado.style.display = "block";
+            finPartida.style.display = "block";
             resultado.innerHTML = "Enhorabuena. Gana " + tablero[0];
             resultado.style.background = "green";
-            otraPartida.style.display = "block";
             //Sumar en el marcador la victoria al jugador correspondiente
             if (turno % 2) {
                 console.log(document.getElementById("wJug1").value);

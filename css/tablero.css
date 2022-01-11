@@ -56,16 +56,26 @@ table {
     margin: 2em auto;
 }
 
+#finPartida {
+    background-color: orange;
+    border-radius: 2em;
+    display: none;
+    height: 35em;
+    margin: -31em auto;
+    padding: 1em;
+    width: 35em;
+    z-index: 2;
+}
+
 #otraPartida {
-    margin-left: 46.6%;
+    margin-left: 37%;
     padding: 1em;
     font-size: 1em;
-    background-color: orange;
-    color: white;
-    border: 0.1em solid orange;
+    background-color: white;
+    color: orange;
+    border: 0.1em solid white;
     border-radius: 1em;
     cursor: pointer;
-    display: none;
 }
 
 #otraPartida:hover {
@@ -74,12 +84,11 @@ table {
 
 #resultado {
     width: 20em;
-    margin: 1em auto;
+    margin: 6em auto;
     text-align: center;
     color: white;
     font-size: 1.5em;
     background-color: black;
     padding: 0.4em;
     border-radius: 1em;
-    display: none;
 }
