@@ -18,48 +18,79 @@
         <a href="../index.html"><i class="fas fa-undo"></i></a>
     </header>
     <section>
-        <div class="marcador">
-            <div class="marcadorJug1">
-                <h3 id="jug1">Jugador 1: </h3>
-                <p id="wJug1">1</p>
+        <article id="formulario">
+            <form id="formJug1">
+                <label for="jugador1">Nombre Jugador 1: </label>
+                <input type="text" id="nombreJug1">
+                <input type="submit" id="btnJug1" value="Aceptar">
+            </form>
+            <div id="avatarJug1">
+                <p class="optAvatar">Elige avatar: </p>
+                <ul>
+                    <li><img src="../../img/dani.jpg" alt="Cara de Dani"></li>
+                    <li><img src="../../img/jesus.jpg" alt="Cara de Jesu"></li>
+                    <li><img src="../../img/antonio.jpg" alt="Cara de Antonio"></li>
+                    <li><img src="../../img/javi.jpg" alt="Cara de Javi"></li>
+                    <li><img src="../../img/mariano.jpg" alt="Cara de Mariano"></li>
+                </ul>
             </div>
-            <div class="marcadorJug2">
-                <h3 id="jug2">Jugador 2:</h3>
-                <p id="wJug2">0</p>
+            <form id="formJug2">
+                <label for="jugador2">Nombre Jugador 2: </label>
+                <input type="text" id="nombreJug2">
+                <input type="submit" id="btnJug2" value="Aceptar">
+            </form>
+            <div id="avatarJug2">
+                <p class="optAvatar">Elige avatar: </p>
+                <ul>
+                    <li><img src="../../img/dani.jpg" alt="Cara de Dani"></li>
+                    <li><img src="../../img/jesus.jpg" alt="Cara de Jesu"></li>
+                    <li><img src="../../img/antonio.jpg" alt="Cara de Antonio"></li>
+                    <li><img src="../../img/javi.jpg" alt="Cara de Javi"></li>
+                    <li><img src="../../img/mariano.jpg" alt="Cara de Mariano"></li>
+                </ul>
             </div>
-        </div>
-        <div id="turnoJug">
-            <h4 id="turnoJug1">jugador1</h4>
-            <h4 id="turnoJug2">jugador2</h4>
-        </div>
-        <table id="juego">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <div id="finPartida">
-            <div id="resultado"></div>
-            <div>
-                <button type="reset" id="otraPartida">REVANCHA</button>
+            <div id="errores"></div>
+        </article>
+        <article id="juegoCompleto">
+            <div class="marcador">
+                <div class="marcadorJug1">
+                    <h3 id="jug1">Jugador 1: </h3>
+                    <p id="wJug1">1</p>
+                </div>
+                <div class="marcadorJug2">
+                    <h3 id="jug2">Jugador 2:</h3>
+                    <p id="wJug2">0</p>
+                </div>
             </div>
-        </div>
+            <div id="turnoJug">
+                <h4 id="turnoJug1">jugador1</h4>
+                <h4 id="turnoJug2">jugador2</h4>
+            </div>
+            <table id="juego">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="finPartida">
+                <div id="resultado"></div>
+                <div>
+                    <button type="reset" id="otraPartida">REVANCHA</button>
+                </div>
+            </div>
+        </article>
     </section>
-    </article>
-    <footer>
-        Copyright &copy; 2021 Todos los derechos reservados JesusVazquez S.A.
-    </footer>
 
     <script src="../../js/juego.js"></script>
 </body>
