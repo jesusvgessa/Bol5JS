@@ -20,8 +20,8 @@ function load(){
 
     function validar(event) {
         event.preventDefault();
-        if (document.getElementById("nombreJug1").value != "" || document.getElementById("nombreJug1").value != null) {
-            var jugador1 = nombreJug1.value;
+        if (document.getElementById("nombreJug1").value != "") {
+            var jugador1 = document.getElementById("nombreJug1").value;
             avatar1.style.display = "block";
         } else {
             error.innerHTML = "ERROR: Introduce un nombre.";

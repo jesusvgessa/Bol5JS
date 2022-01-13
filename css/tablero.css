@@ -1,3 +1,7 @@
+#juegoCompleto{
+    display: none;
+}
+
 .marcador {
     width: 40em;
     color: white;
