@@ -1,4 +1,4 @@
-.principal {
+#cuadroPrincipal {
     text-align: center;
     margin: 2em auto;
     background-image: url('../img/gato/fondo.jpg');
@@ -12,11 +12,11 @@
     box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
 }
 
-.principal img {
-    width: 15em;
+#cuadroPrincipal img {
+    width: 20em;
 }
 
-.listaGatos {
+.lista {
     display: flex;
     justify-content: center;
     background: orange;
@@ -26,12 +26,12 @@
     box-shadow: 0 1em 1.2em rgba(0, 0, 0, 0.1);
 }
 
-.listaGatos ul {
+.lista ul {
     list-style: none;
     display: flex;
 }
 
-.listaGatos li {
+.lista li {
     display: inline-block;
     position: relative;
     margin-left: 3em;
@@ -41,6 +41,6 @@
     cursor: pointer;
 }
 
-.listaGatos img {
+.lista img {
     width: 8em;
 }
