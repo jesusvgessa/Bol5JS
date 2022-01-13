@@ -44,6 +44,11 @@ li {
     text-align: center;
 }
 
+#btnAva1,
+#btnAva2{
+    margin-top: 0.6em;
+}
+
 
 /* block/none */
 
