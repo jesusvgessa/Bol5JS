@@ -36,16 +36,26 @@ li {
     cursor: pointer;
 }
 
-#errores {
+.listaInput {
+    margin-left: -5em;
+}
+
+.listaInput li {
+    margin-left: 4.5em;
+}
+
+#errorJug1,
+#errorJug2 {
     background-color: red;
     color: white;
-    width: 60%;
+    width: 20em;
     border-radius: 2em;
     text-align: center;
+    margin: 0.2em auto;
 }
 
 #btnAva1,
-#btnAva2{
+#btnAva2 {
     margin-top: 0.6em;
 }
 
@@ -54,7 +64,6 @@ li {
 
 #avatarJug1,
 #formJug2,
-#avatarJug2,
-#errores {
+#avatarJug2 {
     display: none;
 }
