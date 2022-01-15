@@ -55,9 +55,8 @@ function load() {
 
             //Recorro la lista de avatares del 2 jugador, para borrar el que ya esta elegido
             var lista = document.querySelectorAll(".listaAvatares2>li");
-            console.log(lista[0].attributes.src);
-            formAvatar2.style.display = "block";
-
+            console.log(jugador1);
+            console.log(avatar1);
         } else {
             errorJug2.innerText = "ERROR: Introduce un nombre.";
         } //Fin Si
