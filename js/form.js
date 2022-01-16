@@ -18,6 +18,8 @@ function load() {
     var btnAva2 = document.getElementById("btnAva2");
     var errorAva2 = document.getElementById("errorAva2");
 
+    var juegoCompleto = document.getElementById("juegoCompleto");
+
     //Añado los eventos convenientes:
     btnJug1.addEventListener("click", validarNombre1);
     btnAva1.addEventListener("click", validarAvatar1);
@@ -35,6 +37,7 @@ function load() {
         } else {
             errorJug1.innerText = "ERROR: Introduce un nombre.";
         } //Fin Si
+        return jugador1;
     } //Fin Funcion
 
     function validarAvatar1(event) {
@@ -43,6 +46,7 @@ function load() {
         formJug1.style.display = "none";
         formAvatar1.style.display = "none";
         formJug2.style.display = "block";
+        return avatar1;
     }
 
     function validarNombre2(event) {
@@ -52,11 +56,7 @@ function load() {
                 errorJug2.removeChild(errorJug2.firstChild);
             } //Fin Si
             var jugador2 = document.getElementById("nombreJug2").value;
-
-            //Recorro la lista de avatares del 2 jugador, para borrar el que ya esta elegido
-            var lista = document.querySelectorAll(".listaAvatares2>li");
-            console.log(jugador1);
-            console.log(avatar1);
+            formAvatar2.style.display = "block";
         } else {
             errorJug2.innerText = "ERROR: Introduce un nombre.";
         } //Fin Si
@@ -65,5 +65,8 @@ function load() {
     function validarAvatar2(event) {
         event.preventDefault();
         var avatar2 = document.getElementById("avatar2").value;
+        formJug2.style.display = "none";
+        formAvatar2.style.display = "none";
+        juegoCompleto.style.display = "block";
     }
 }
