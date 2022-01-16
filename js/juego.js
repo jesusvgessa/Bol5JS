@@ -82,5 +82,24 @@ function victoria() {
 
 //Le doy la funcion de resetear al boton revancha
 document.getElementById("otraPartida").addEventListener("click", function() {
-    document.getElementById("juego").reset();
+    //Cambio marcador:
+    document.getElementById("wJug1").innerHTML = document.getElementById("wJug1").value;
+    document.getElementById("wJug2").innerHTML = document.getElementById("wJug2").value;
+
+    //Vuelvo a ocultar el fin de partida
+    finPartida.style.display = "none";
+
+    //Reinicio los marcadores de las celdas y las variables
+    var turno = 0;
+    var tablero = new Array();
+    for (var i = 0; i < 9; i++) {
+        tablero.push("");
+    } //Fin Para
+
+    //Recojo en un array todas las celdas, para borrarles el background
+    var fondos = document.querySelectorAll("td");
+    console.log(fondos);
+    for (var i = 0; i < fondos.length; i++) {
+        fondos[i].style.backgroundImage = "none";
+    } //Fin Para
 });

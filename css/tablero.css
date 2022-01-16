@@ -72,7 +72,21 @@ table {
 }
 
 .opt {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#volverMenu {
+    padding: 1em;
+    font-size: 1em;
+    background-color: white;
+    color: orange;
+    border: 0.1em solid white;
+    border-radius: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 2em;
 }
 
 #otraPartida {
@@ -85,6 +99,7 @@ table {
     cursor: pointer;
 }
 
+#volverMenu:hover,
 #otraPartida:hover {
     opacity: 0.7;
 }
