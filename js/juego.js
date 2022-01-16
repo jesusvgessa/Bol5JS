@@ -44,12 +44,19 @@ var celdaMarcada = (e, pos) => {
             resultado.style.background = "green";
             //Sumar en el marcador la victoria al jugador correspondiente
             // Lo guardamos en localStorage, pasándolo a cadena con JSON
+            //Para guardarlos, le guardo la longitud del localstorage para ir acumulando
             if (turno % 2) {
                 document.getElementById("wJug1").value++;
-                localStorage.setItem('key', JSON.stringify(jugador1));
+                var num = String(localStorage.length + 1);
+                var nombre = String(jugador1);
+                var object = { num: nombre };
+                localStorage.setItem('key', JSON.stringify(object));
             } else {
                 document.getElementById("wJug2").value++;
-                localStorage.setItem('key', JSON.stringify(jugador2));
+                var num = String(localStorage.length + 1);
+                var nombre = String(jugador2);
+                var object = { num: nombre };
+                localStorage.setItem('key', JSON.stringify(object));
             } //Fin Si
         } //Fin Si   
     }
