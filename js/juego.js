@@ -43,10 +43,13 @@ var celdaMarcada = (e, pos) => {
             resultado.innerHTML = "Enhorabuena. Gana " + ganador;
             resultado.style.background = "green";
             //Sumar en el marcador la victoria al jugador correspondiente
+            // Lo guardamos en localStorage, pasándolo a cadena con JSON
             if (turno % 2) {
                 document.getElementById("wJug1").value++;
+                localStorage.setItem('key', JSON.stringify(jugador1));
             } else {
                 document.getElementById("wJug2").value++;
+                localStorage.setItem('key', JSON.stringify(jugador2));
             } //Fin Si
         } //Fin Si   
     }
