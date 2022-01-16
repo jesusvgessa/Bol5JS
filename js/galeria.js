@@ -6,7 +6,7 @@ var lista = document.querySelectorAll("li>img");
 
 //Les doy un evendo onClick a todas
 for (var i = 0; i < lista.length; i++) {
-    lista[i].addEventListener("click", cambioPrincipal);
+    lista[i].addEventListener("mousemove", cambioPrincipal);
 } //Fin Para
 
 //Funcion para cambiar la imagen principal
