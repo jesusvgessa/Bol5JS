@@ -1,3 +1,9 @@
+//Variables:
+var jugador1 = "";
+var avatar1 = "";
+var jugador2 = "";
+var avatar2 = "";
+
 window.onload = load;
 
 function load() {
@@ -32,21 +38,26 @@ function load() {
             if (errorJug1.innerText.length != 0) {
                 errorJug1.removeChild(errorJug1.firstChild);
             } //Fin Si
-            var jugador1 = document.getElementById("nombreJug1").value;
+            jugador1 = document.getElementById("nombreJug1").value;
             formAvatar1.style.display = "block";
         } else {
             errorJug1.innerText = "ERROR: Introduce un nombre.";
         } //Fin Si
-        return jugador1;
     } //Fin Funcion
 
     function validarAvatar1(event) {
         event.preventDefault();
-        var avatar1 = document.getElementById("avatar1").value;
+        //Cojo todos los valores de los radio inputs.
+        var avatares = document.querySelectorAll("#avatar1");
+        //Lo recorro preguntando cual es el que esta marcado.
+        for (var i = 0; i < avatares.length; i++) {
+            if (avatares[i].checked) {
+                avatar1 = avatares[i].value;
+            } //Fin Si
+        } //Fin Para
         formJug1.style.display = "none";
         formAvatar1.style.display = "none";
         formJug2.style.display = "block";
-        return avatar1;
     }
 
     function validarNombre2(event) {
@@ -55,7 +66,7 @@ function load() {
             if (errorJug2.innerText.length != 0) {
                 errorJug2.removeChild(errorJug2.firstChild);
             } //Fin Si
-            var jugador2 = document.getElementById("nombreJug2").value;
+            jugador2 = document.getElementById("nombreJug2").value;
             formAvatar2.style.display = "block";
         } else {
             errorJug2.innerText = "ERROR: Introduce un nombre.";
@@ -64,9 +75,21 @@ function load() {
 
     function validarAvatar2(event) {
         event.preventDefault();
-        var avatar2 = document.getElementById("avatar2").value;
+        var avatares = document.querySelectorAll("#avatar2");
+        for (var i = 0; i < avatares.length; i++) {
+            if (avatares[i].checked) {
+                avatar2 = avatares[i].value;
+            } //Fin Si
+        } //Fin Para
         formJug2.style.display = "none";
         formAvatar2.style.display = "none";
+
+        //Cambio los valores del marcador
+        document.getElementById("jug1").innerText = jugador1;
+        document.getElementById("jug2").innerText = jugador2;
+        document.getElementById("turnoJug1").innerText = jugador1;
+        document.getElementById("turnoJug2").innerText = jugador2;
+
         juegoCompleto.style.display = "block";
     }
 }

@@ -5,6 +5,11 @@ document.querySelectorAll("td").forEach((obj, i) => obj.addEventListener("click"
 //Variables:
 var turno = 0; //Contador de turnos
 var tablero = new Array(); //Array de las celdas
+
+//Reinicio marcador
+document.getElementById("wJug1").value = 0;
+document.getElementById("wJug2").value = 0;
+
 //Le asigno a cada celda un valor false, para controlar si esta marcada la celda o no
 for (var i = 0; i < 9; i++) {
     tablero.push("");
@@ -20,7 +25,7 @@ var celdaMarcada = (e, pos) => {
         turno++;
         //Si el turno es impar, es el turno del jugador 1.
         //Si no, seria turno del jugador 2
-        celda.style.backgroundImage = turno % 2 ? "url(../../img/mariano.jpg)" : "url(../../img/jesus.jpg)";
+        celda.style.backgroundImage = turno % 2 ? "url(../../img/" + avatar1 + ".jpg)" : "url(../../img/" + avatar2 + ".jpg)";
         tablero[pos] = turno % 2 ? "jug1" : "jug2";
 
         //Cambio en el contenedor de turnos, para reflejar a quien le toca
@@ -34,16 +39,22 @@ var celdaMarcada = (e, pos) => {
 
         if (victoria()) {
             finPartida.style.display = "block";
-            resultado.innerHTML = "Enhorabuena. Gana " + tablero[0];
+            var ganador = turno % 2 ? jugador1 : jugador2;
+            resultado.innerHTML = "Enhorabuena. Gana " + ganador;
             resultado.style.background = "green";
             //Sumar en el marcador la victoria al jugador correspondiente
             if (turno % 2) {
-                console.log(document.getElementById("wJug1").value);
-            }
-        }
-    } else {
-        document.getElementById("resultado").innerHTML = "Ya ha terminado la partida";
+                document.getElementById("wJug1").value++;
+            } else {
+                document.getElementById("wJug2").value++;
+            } //Fin Si
+        } //Fin Si   
     }
+    if (turno == 9) {
+        finPartida.style.display = "block";
+        resultado.innerHTML = "EMPATE";
+        resultado.style.background = "grey";
+    } //Fin Si
 }
 
 function victoria() {

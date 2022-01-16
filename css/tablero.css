@@ -1,4 +1,4 @@
-#juegoCompleto{
+#juegoCompleto {
     display: none;
 }
 
@@ -71,8 +71,11 @@ table {
     z-index: 2;
 }
 
+.opt {
+    margin: 0 auto;
+}
+
 #otraPartida {
-    margin-left: 37%;
     padding: 1em;
     font-size: 1em;
     background-color: white;
